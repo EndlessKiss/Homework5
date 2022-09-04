@@ -66,5 +66,6 @@ public class Main {
             default:
 
         }
+        //как то так
     }
 }
