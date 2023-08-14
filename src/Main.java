@@ -31,14 +31,17 @@ public class Main {
             System.out.println("Год не високосный.");
         }
         //Задача 4
-        int deliveryDistance = 95;
-        int time = 1;
-        if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: " + time);
-        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: " + (time + 1));
-        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: " + (time + 2));
+        int deliveryDistance = 30;
+        boolean oneZone = deliveryDistance <= 20;
+        boolean twoZone = deliveryDistance >= 20 && deliveryDistance < 60;
+        boolean threeZone = deliveryDistance>= 60&& deliveryDistance <100;
+        int day =1;
+        if (oneZone) {
+            System.out.println("доставка " + day + " день");
+        }else if (twoZone) {
+            System.out.println("доставка " + (day +1)+ " дня");
+        } else if (threeZone){
+            System.out.println("доставка " + (day +2) + " дня");
         }
         //Задача 5
         int monthNumber = 13;
